@@ -35,8 +35,20 @@ def create_cone(base_point=None, height=10.0, radius=5.0, cap_bottom=True):
     cone = rg.Cone(plane, height, radius)
     return cone.ToBrep(cap_bottom)
 
-def create_sphere():
-    pass  # TODO: Implement this function to create a sphere using Rhino.Geometry
+def create_sphere(center=None, radius=5.0):
+    """
+    Build a sphere as a Brep.
+
+    center : Rhino.Geometry.Point3d -- center of the sphere
+    radius : float -- sphere radius
+
+    Returns a Rhino.Geometry.Brep.
+    """
+    if center is None:
+        center = rg.Point3d(0, 0, 0)
+
+    sphere = rg.Sphere(center, radius)
+    return sphere.ToBrep()
 
 def boolean_difference(brep_a, brep_b):
     """
