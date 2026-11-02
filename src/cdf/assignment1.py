@@ -98,16 +98,5 @@ def create_spiral_staircase(
     return stairs
 
 
-# Grasshopper outputs
-cylinder = create_cylinder(height, radius)
-
-stairs = create_spiral_staircase(
-    height,
-    radius,
-    stair_width,
-    step_height,
-    steps_per_turn,
-    step_thickness
-)
 
 

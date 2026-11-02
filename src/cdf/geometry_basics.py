@@ -87,3 +87,4 @@ def copy_brep_along_z(brep, distance, copy_count):
         copy.Transform(rg.Transform.Translation(rg.Vector3d(0, 0, distance * i)))
         copies.append(copy)
     return copies
+
