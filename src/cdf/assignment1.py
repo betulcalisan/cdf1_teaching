@@ -193,6 +193,7 @@ def create_door_openings(
 
         # Tangential direction
         tangent = rg.Vector3d(
+            
             -math.sin(angle),
             math.cos(angle),
             0
